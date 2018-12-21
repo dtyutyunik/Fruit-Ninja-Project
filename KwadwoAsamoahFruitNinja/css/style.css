@@ -1,0 +1,503 @@
+*{
+	margin:0;
+	cursor: url(../media/images/swordedit3.png),crosshair;
+	
+}
+
+#Title{
+	font-family: 'ZCOOL KuaiLe', cursive;
+	font-size: 70pt;
+	padding-left: 80px;
+
+}
+#counters{
+		display:flex;
+		margin-left: 70vw;
+
+}
+
+#scoreAndImg{
+	display:flex;
+}
+#lifeAndImg{
+	display:flex;
+}
+
+.info{
+	font-family: 'ZCOOL KuaiLe', cursive;
+	font-size: 30pt;
+	padding-right: 30px;
+	text-align: center;
+
+
+}
+#scoreCherry{
+	background-image: url("../media/images/cherries.png");
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+}
+#lifeHeart{
+	background-image: url("../media/images/heartlogo.png");
+	background-size: cover;
+	width: 50px;
+	height: 40px;
+	transition: 4s;
+	animation: heartwiggle 1s ease-out 0s infinite;
+
+}
+#scoreKeeper{
+	font-size: 40pt;
+	text-align: center;
+}
+#lifeKeeper{
+	font-size: 40pt;
+}
+#cushion{
+
+}
+#gameArea{
+	display: flex;
+	width:100vw;
+	height:70vh;
+	background-image: url("../media/images/woodenback1.jpg");
+}
+.borders{
+	width:80px;
+	border-left: solid white 10pt;
+	border-right: solid white 10pt;
+
+}
+#cuttingArea{
+	flex:4;
+	border:double 3px;
+}
+
+.appleClass{
+	top:100vh;
+	background-image: url("../media/images/apple.png");
+	background-size: cover;
+	width:150px;
+	height:150px;
+	position:absolute;
+	z-index: 10;
+	transition:4s;
+	cursor: url(../media/images/swordedit5.png),crosshair;
+
+	animation: risingApple 1.3s ease-in-out 2.02 alternate;
+	
+}
+.bananaClass{
+	top:100vh;
+	width:200px;
+	height:180px;
+	position:absolute;
+	z-index: 10;
+	transition:4s;
+	background-image: url("../media/images/banana.png");
+	background-size: cover;
+	cursor: url(../media/images/swordedit5.png),crosshair;
+
+
+
+	animation: risingBanana 1.5s ease-in-out 2.02 alternate;
+	
+}
+.peachClass{
+	width:150px;
+	height:150px;
+	position:absolute;
+	z-index: 10;
+	transition:4s;
+	background-image: url("../media/images/peach.png");
+	background-size: cover;
+	cursor: url(../media/images/swordedit5.png),crosshair;
+
+
+	animation: risingPeach 1.4s ease-in-out 2.02 alternate;
+	
+}
+.watermelonClass{
+	width:150px;
+	height:150px;
+	background-image: url('../media/images/watermelon.png');
+	background-size: cover;
+	position:absolute;
+	z-index: 10;
+	transition:4s;
+	cursor: url(../media/images/swordedit5.png),crosshair;
+
+
+	animation: risingWatermelon 1.8s ease-in-out 2.02 alternate;
+}
+
+.pearClass{
+	width:150px;
+	height:150px;
+	background-image: url('../media/images/pear.png');
+	background-size: cover;
+	position:absolute;
+	z-index: 10;
+	transition:4s;
+	cursor: url(../media/images/swordedit5.png),crosshair;
+
+
+	animation: risingPear 1.3s ease-in-out 2.02 alternate;
+}
+
+.killedApple{
+	width:200px;
+	height:200px;
+	position:absolute;
+	z-index: 10;
+	transition:.3s;
+	opacity: 40%;
+	background-image: url("../media/images/cutapple.png");
+
+}
+.killedBanana{
+	width:280px;
+	height:270px;
+	position:absolute;
+	z-index: 10;
+	transition:.3s;
+	opacity: 40%;
+	background-image: url("../media/images/cutbanana.png");
+	background-size: cover;
+
+
+
+}
+.killedPeach{
+	width:200px;
+	height:170px;
+	position:absolute;
+	z-index: 10;
+	transition:.3s;
+	opacity: 40%;
+	background-image: url("../media/images/cutpeach.png");
+	background-size: cover;
+
+
+
+}
+.killedWatermelon{
+	width:200px;
+	height:270px;
+	position:absolute;
+	z-index: 10;
+	transition:.3s;
+	opacity: 40%;
+	background-image: url("../media/images/watermeloncut.png");
+	background-size: cover;
+}
+
+.killedPear{
+	width:200px;
+	height:270px;
+	position:absolute;
+	z-index: 10;
+	transition:.3s;
+	opacity: 40%;
+	background-image: url("../media/images/cutpear.png");
+	background-size: cover;
+}
+
+.bombClass{
+	
+	width:150px;
+	height:200px;
+	position:absolute;
+	z-index: 11;
+	cursor: url(../media/images/8bit.png),crosshair;
+
+
+	background-image: url("../media/images/bomb.png");
+	background-size: cover;
+	animation: risingBomb 1s ease-in-out 2.02 alternate;
+
+}
+.killBomb{
+	
+	width:300px;
+	height:300px;
+	
+	position:absolute;
+	z-index: 10;
+	transition: .1s;
+	background-image: url("../media/images/boom.png");
+	background-size: cover;
+
+}
+
+@keyframes risingApple{
+        0%{
+        	top:90vh;
+        	
+        	
+        }
+        
+        100%{
+        	top:0vh;
+        	transform: rotate(30deg);
+
+
+        }
+    }
+    @keyframes risingBanana{
+        0%{
+        	top:90vh;
+        	
+        	
+        }
+        
+        100%{
+        	top:0vh;
+        	transform: rotate(-50deg);
+
+
+        }
+    }
+
+    @keyframes risingPeach{
+        0%{
+        	top:90vh;
+        	
+        	
+        }
+        
+        100%{
+        	top:0vh;
+        	transform: rotate(80deg);
+
+
+        }
+    }
+@keyframes risingWatermelon{
+        0%{
+        	top:90vh;
+        	
+        	
+        }
+        
+        100%{
+        	top:0vh;
+        	transform: rotate(80deg);
+
+
+        }
+    }
+    @keyframes risingPear{
+        0%{
+        	top:90vh;
+        	
+        	
+        }
+        
+        100%{
+        	top:0vh;
+        	transform: rotate(-60deg);
+
+
+        }
+    }
+     @keyframes risingBomb{
+        0%{
+        	top:90vh;
+        	}
+        33%{
+        	left:44vw;
+
+        }
+
+        
+        
+        100%{
+        	top:0vh;
+        	transform: rotate(80deg);
+
+
+        }
+    }
+
+@keyframes heartwiggle{
+	0%{
+		transform: rotate(0deg);
+	}
+	33%{
+		transform: rotate(-10deg);
+
+
+	}
+	66%{
+		transform:rotate(10deg);
+	}
+	
+}
+    .gameoverModal{
+    	position:absolute;
+    	top: 0;
+    	bottom:50px;
+    	left:7%;
+    	margin-bottom: 100%;
+    	z-index: 20;
+    	width:80vw;
+    	height:80vh;
+    	transition: 2s;
+    	border:inset rgba(200,200,200,0.5) 30pt;
+    	
+    	display: none;
+    	background-image:url("../media/images/woodenback4.jpg");
+
+    }
+    #gameover{
+    	font-family:  'ZCOOL KuaiLe', cursive;
+    	font-size: 80pt;
+    	color:white;
+    	text-align: center;
+    	animation: gameover 1s ease-in-out ;
+
+    }
+    #gameoverSpecs{
+    	display:flex;
+    	padding-top: 100px;
+    }
+    #results{
+    	color:white;
+    	border:solid white 3pt;
+    	width:400px;
+    	height: 300px;
+    }
+#acheive h2{
+
+	    font-family:  'ZCOOL KuaiLe', cursive;
+	    margin-left: 80px;
+	    font-size: 24pt;
+	    text-decoration: underline;
+	    margin-bottom: 30px;
+		color: white;
+}
+#acheive li{
+	    font-family:  'Bangers', cursive;
+	    color: white;
+	    font-size: 24pt;
+	    letter-spacing: 4px;
+	    margin-left: 40px;
+
+}
+#finalScore{
+	font-size: 55pt;
+}
+#keep{
+	text-align: center;
+	font-size: 40pt;
+	color:green;
+	
+	background-image: linear-gradient( pink,white);
+	margin-top: 25%;
+	font-family:  'Bangers', cursive;
+	height: 80px;
+	padding-top: 20px;
+	border-radius: 5%;
+	transition: .3s;
+
+}#keep:hover{
+	text-align: center;
+	font-size: 48pt;
+	color:black;
+	background-image: linear-gradient( white,pink, red);
+	margin-top: 25%;
+	font-family:  'Bangers', cursive;
+	height: 80px;
+	padding-top: 20px;
+	border-radius: 5%;
+	cursor: pointer;
+	transition: .7s;
+
+}
+@keyframes gameover{
+	0%{font-size: 100pt;
+	}
+	50%{font-size:  60pt;
+	}
+	100%{font-size: 80pt};
+}
+span{
+	color:rgba(230,100,100,0.75);
+	font-size: 30pt;
+}
+/*-----------------------------------------
+	Landing Page Styles
+_________________________________________*/
+
+#landingTitle{
+	font-family: 'ZCOOL KuaiLe', cursive;
+	font-size: 100pt;
+	left: 44%;
+	top: 20%;
+	position:absolute;
+	z-index: 10;
+
+}
+#ninja{
+	color:rgba(100,100,100,0.8);
+	font-size: 100pt;
+}
+main{
+	display: flex;
+}
+#shuriken{
+	background-image: url('../media/images/shuriken.png');
+	width:800px;
+	transition: 8s;
+	height:800px;
+	cursor: pointer;
+	animation: spinz 15s linear alternate 5s ;
+}
+#instrContainer{
+	margin-top: 25%;
+
+	font-size: 18pt;
+	padding-right: 100px;
+	padding-left: 100px;
+
+}
+#instrHead{
+	font-family: 'ZCOOL KuaiLe', cursive;
+	padding-bottom: 40px;
+margin-left: 100%;
+}
+#instrList{
+	font-family: 'helvetica';
+	position: absolute;
+	padding-right: 100px;
+	padding-left: 100px;
+	font-weight: 300;
+	list-style: sidama;
+
+
+}
+#instrList li{
+	padding-top: 5%;
+		list-style: none;
+
+}
+
+@keyframes spinz{
+	0%{
+		transform: rotate(0deg);
+		transition: 2s;
+	}
+	50%{
+		transform: rotate(360deg);
+		transition: 2s;
+	}
+	100%{
+		transform: rotate(4000deg);
+		transition: 2s;
+	}
+}
+#shuriken:hover{
+	transition: 4s;
+	transform: rotate(2800deg);
+}
