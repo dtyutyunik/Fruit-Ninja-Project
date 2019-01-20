@@ -11,6 +11,8 @@ lifeKeeper.innerText = 6;
 
 initializeFruitScopeContainer();
 
+//as
+
 //-------------------------------------------------------------
 							//Fruits
 //-------------------------------------------------------------
@@ -23,7 +25,7 @@ function spawnApple(){
 	let apple = document.createElement('div');
 	apple.classList.add('appleClass');
 	body.append(apple);
- 
+
 	apple.addEventListener("mouseleave",killApple)
 
 	function killApple(){
@@ -37,29 +39,29 @@ function spawnApple(){
 
 
 			apple.classList.add('killedApple');
-			setTimeout(function(){ 
+			setTimeout(function(){
       		apple.remove();
     		}, 600)
-			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1; 
-			scoreKeeper.innerText.toString(); 
+			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1;
+			scoreKeeper.innerText.toString();
 			finalScore.innerText = scoreKeeper.innerText;
 			clearInterval(fruitInterval);
 
 	}
-	
 
-	
+
+
 
 
 	let positionY = 0;
 	let positionX = Math.floor(Math.random() * 90);
 	let positionWild = Math.floor(Math.random() * 90);
-	
-	let fruitInterval = setInterval(fruitMove,20) 
 
-	
+	let fruitInterval = setInterval(fruitMove,20)
 
-	
+
+
+
 
 
 	function fruitMove(){
@@ -67,7 +69,7 @@ function spawnApple(){
 			positionY++;
 			apple.style.top = positionY + "vh";
 			apple.style.left = positionX + "vw";
-			
+
 
 			if(apple.style.top == '120vh'){
 
@@ -105,7 +107,7 @@ function spawnBanana(){
 	let banana = document.createElement('div');
 	banana.classList.add('bananaClass');
 	body.append(banana);
- 
+
 	banana.addEventListener("mouseleave",killBanana)
 
 	function killBanana(){
@@ -117,31 +119,31 @@ function spawnBanana(){
 
 
 			banana.classList.add('killedBanana');
-			setTimeout(function(){ 
+			setTimeout(function(){
       		banana.remove();
     		}, 600)
 
 
-			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1; 
-			scoreKeeper.innerText.toString(); 
+			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1;
+			scoreKeeper.innerText.toString();
 			finalScore.innerText = scoreKeeper.innerText;
 			clearInterval(fruitInterval);
 
 	}
-	
 
-	
+
+
 
 
 	let positionY = 0;
 	let positionX = Math.floor(Math.random() * 90);
 	let positionWild = Math.floor(Math.random() * 90);
-	
-	let fruitInterval = setInterval(fruitMove,20) 
 
-	
+	let fruitInterval = setInterval(fruitMove,20)
 
-	
+
+
+
 
 
 	function fruitMove(){
@@ -149,7 +151,7 @@ function spawnBanana(){
 			positionY++;
 			banana.style.top = positionY + "vh";
 			banana.style.left = positionX + "vw";
-			
+
 
 			if(banana.style.top == '120vh'){
 
@@ -189,7 +191,7 @@ function spawnPeach(){
 	let peach = document.createElement('div');
 	peach.classList.add('peachClass');
 	body.append(peach);
- 
+
 	peach.addEventListener("mouseleave",killPeach)
 
 	function killPeach(){
@@ -201,29 +203,29 @@ function spawnPeach(){
 			body.append(peachSndfx);
 
 			peach.classList.add('killedPeach');
-			setTimeout(function(){ 
+			setTimeout(function(){
       		peach.remove();
     		}, 600)
-			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1; 
-			scoreKeeper.innerText.toString(); 
+			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1;
+			scoreKeeper.innerText.toString();
 			finalScore.innerText = scoreKeeper.innerText;
 			clearInterval(fruitInterval);
 
 	}
-	
 
-	
+
+
 
 
 	let positionY = 0;
 	let positionX = Math.floor(Math.random() * 90);
 	let positionWild = Math.floor(Math.random() * 90);
-	
-	let fruitInterval = setInterval(fruitMove,20) 
 
-	
+	let fruitInterval = setInterval(fruitMove,20)
 
-	
+
+
+
 
 
 	function fruitMove(){
@@ -231,7 +233,7 @@ function spawnPeach(){
 			positionY++;
 			peach.style.top = positionY + "vh";
 			peach.style.left = positionX + "vw";
-			
+
 
 			if(peach.style.top == '120vh'){
 
@@ -269,7 +271,7 @@ function spawnWatermelon(){
 	let watermelon = document.createElement('div');
 	watermelon.classList.add('watermelonClass');
 	body.append(watermelon);
- 
+
 	watermelon.addEventListener("mouseleave",killWatermelon)
 
 	function killWatermelon(){
@@ -281,30 +283,30 @@ function spawnWatermelon(){
 			body.append(watermelonSndfx);
 
 			watermelon.classList.add('killedWatermelon');
-			setTimeout(function(){ 
+			setTimeout(function(){
       		watermelon.remove();
     		}, 600)
-			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1; 
+			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1;
 			scoreKeeper.innerText.toString();
-			finalScore.innerText = scoreKeeper.innerText; 
+			finalScore.innerText = scoreKeeper.innerText;
 			clearInterval(fruitInterval);
 				 return finalScore;
 
 	}
-	
 
-	
+
+
 
 
 	let positionY = 0;
 	let positionX = Math.floor(Math.random() * 90);
 	let positionWild = Math.floor(Math.random() * 90);
-	
-	let fruitInterval = setInterval(fruitMove,20) 
 
-	
+	let fruitInterval = setInterval(fruitMove,20)
 
-	
+
+
+
 
 
 	function fruitMove(){
@@ -312,7 +314,7 @@ function spawnWatermelon(){
 			positionY++;
 			watermelon.style.top = positionY + "vh";
 			watermelon.style.left = positionX + "vw";
-			
+
 
 			if(watermelon.style.top == '120vh'){
 
@@ -352,7 +354,7 @@ function spawnPear(){
 	let pear = document.createElement('div');
 	pear.classList.add('pearClass');
 	body.append(pear);
- 
+
 	pear.addEventListener("mouseleave",killPear)
 
 	function killPear(){
@@ -364,28 +366,28 @@ function spawnPear(){
 			body.append(pearSndfx);
 
 			pear.classList.add('killedPear');
-			setTimeout(function(){ 
+			setTimeout(function(){
       		pear.remove();
     		}, 600)
-			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1; 
+			scoreKeeper.innerText = parseFloat(scoreKeeper.innerText) + 1;
 			scoreKeeper.innerText.toString();
-			 finalScore.innerText = scoreKeeper.innerText; 
+			 finalScore.innerText = scoreKeeper.innerText;
 			clearInterval(fruitInterval);
 	}
-	
 
-	
+
+
 
 
 	let positionY = 0;
 	let positionX = Math.floor(Math.random() * 90);
 	let positionWild = Math.floor(Math.random() * 90);
-	
-	let fruitInterval = setInterval(fruitMove,20) 
 
-	
+	let fruitInterval = setInterval(fruitMove,20)
 
-	
+
+
+
 
 
 	function fruitMove(){
@@ -393,7 +395,7 @@ function spawnPear(){
 			positionY++;
 			pear.style.top = positionY + "vh";
 			pear.style.left = positionX + "vw";
-			
+
 
 			if(pear.style.top == '120vh'){
 
@@ -404,7 +406,7 @@ function spawnPear(){
 			failSound.setAttribute("src","media/sounds/robloxdeath.mp3");
 			body.append(failSound);
 
-				
+
 			pear.remove();
 			clearInterval(fruitInterval);
 			lifeKeeper.innerText = parseFloat(lifeKeeper.innerText) - 1;
@@ -444,7 +446,7 @@ let bomb = document.createElement('div');
 	body.append(bomb);
 
 
- 
+
 	bomb.addEventListener("mouseleave",hitBomb);
 
 		function hitBomb(){
@@ -453,17 +455,17 @@ let bomb = document.createElement('div');
 			bombBang.Muted = true;
 			bombBang.setAttribute("src","media/sounds/bomb.wav");
 			body.append(bombBang);
-			
+
 
 			bomb.classList.add('killBomb');
-			setTimeout(function(){ 
+			setTimeout(function(){
       		bomb.remove();
     		}, 200)
 			lifeKeeper.innerText = parseFloat(lifeKeeper.innerText) - 1;
 			if(lifeKeeper.innerText<=0){
 			gameoverModal.style.display='block';
 			}
-			
+
 			clearInterval(bombInterval);
 		}
 
@@ -473,22 +475,22 @@ let positionY = 0;
 let positionX = Math.random() * 90;
 
 function bombMove(){
-	
+
 	positionY++;
 	bomb.style.top = positionY + "vh";
 	bomb.style.left = positionX + "vw";
-	
+
 
 		if(bomb.style.top == '90vh'){
 		bomb.remove();
 		clearInterval(bombInterval);
 	}
-} 
+}
 }
 
 //---------------------------------------------------------
 					//GameOver
-//---------------------------------------------------------					
+//---------------------------------------------------------
 
 
 let gameoverModal = document.querySelector('.gameoverModal');
@@ -497,18 +499,3 @@ let playAgain = document.querySelector('#keep');
 playAgain.addEventListener("click",function(){
 	location.reload();
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
